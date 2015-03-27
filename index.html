@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Développeurs,</h1>
+          <h1>Gagnez du temps</h1>
+          <h1>avec le Cloud</h1>
+          <p>
+            <small>Christophe Bliard / <a href="http://twitter.com/cbliard">@cbliard</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>À propos</h2>
+          <p>
+            Ancien développeur Java/J2EE
+          </p>
+          <p>
+            Développeur Ruby on Rails &amp; Ember.js pour Hiptest
+          </p>
+          <p>
+            <i>Afficher "Avant : des logos", puis "Après : des logos", et enfin avoir quelques logos qui s'effacent
+            </i>
+          </p>
+        </section>
+
+        <section>
+          <h2>Plan</h2>
+          <p>Cloud ?</p>
+          <p>Notre usage</p>
+          <p>Autres usages</p>
+        </section>
+
+        <section>
+          <h2>Avertissement</h2>
+          <p>Ceci est une discussion</p>
+        </section>
+
+        <section>
+          <h2>Cloud Computing</h2>
+          <h2>IaaS, PaaS, SaaS ?</h2>
+          <h5>wtf ?</h5>
+          <aside class="notes">
+            Cloud computing is in a nutshell the delivery of compute / applications / storage as a service to consumers of the service.  The term cloud comes from the fact a cloud like symbol is often used to denote cloud services as per the diagram above.  The users / consumers of the service at a high level only need to know how to connect to the service, they do not need to have any knowledge of what underpins or provides the service in order to use it.
+
+            While the term ‘cloud computing’ may be relatively new, we have all been using cloud based services for many years, the most common example of this being online email services such as Hotmail and Gmail.  Hotmail has been operating as an online email cloud service since the mid 1990s.
+
+            En 2012, une étude de Citrix, 95% des américains déclaraient ne pas utiliser le cloud, alors que la plupart achetaient, stockaient des photos, écoutaient de la musique, géraient leur compte en banque en ligne. 29% pensent que c'est lié à la météo.
+            http://www.citrix.com/news/announcements/aug-2012/most-americans-confused-by-cloud-computing-according-to-national.html
+          </aside>
+        </section>
+
+        <section>
+          <h2>Pizza !</h2>
+          <ul>
+            <li>Table</li>
+            <li>Boissons</li>
+            <li>Électricité/Gaz</li>
+            <li>Four</li>
+            <li>Cuisson</li>
+            <li>Fromage</li>
+            <li>Garniture</li>
+            <li>Sauce tomate</li>
+            <li>Pâte à pizza</li>
+          </ul>
+          <aside class="notes">
+            Faite maison
+            Prête à cuire
+            Livrée
+            Sortie resto
+          </aside>
+        </section>
+
+        <section>
+          <section>
+            <h2>Logiciel !</h2>
+            <ul>
+              <li>Applications</li>
+              <li>Données</li>
+              <li>Runtime</li>
+              <li>Middleware</li>
+              <li>Système d'exploitation</li>
+              <li>Virtualisation</li>
+              <li>Serveurs</li>
+              <li>Stockage</li>
+              <li>Réseau</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Infrastructure as a Service</h2>
+            <ul>
+              <li>Matériel à la demande</li>
+              <li>Migrez</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Platform as a Service</h2>
+            <ul>
+              <li>Briques logicielles à la demande</li>
+              <li>Construisez</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Software as a Service</h2>
+            <ul>
+              <li>Logiciel à la demande</li>
+              <li>Utilisez</li>
+            </ul>
+          </section>
+        </section>
+
+<!--
+Sites sympas :
+  - https://kevinfielder.wordpress.com/2012/06/21/very-simple-introduction-to-cloud-computing/
+  - http://www.kheops.org/solutions/architecte-cloud/iaas-saas-paas
+  - http://www.culture-informatique.net/cest-quoi-le-cloud-2/
+  - http://support.cloudwatt.com/kb/faq/lecloud/iaas-paas-saas-definition.html
+-->
+
+        <section>
+          <h2>Autres aspects</h2>
+          <ul>
+            <li>Cloud public/privé/hybride</li>
+            <li>Paiement à l'usage</li>
+            <li>Flexibilité</li>
+            <li>Mise à jour en continu</li>
+            <li>ATAWAD</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Hiptest</h2>
+          <h4>Historique de notre infra</h4>
+        </section>
+
+        <section>
+          <h2>Étape 1</h2>
+          <ul>
+            <li>code sur GitHub</li>
+            <li>Intégration continue Jenkins</li>
+            <li>Déploiement continu serveur dédié OVH avec Capistrano</li>
+            <li>Sauvegarde journalière db</li222222>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Étape 2</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+             <circle class="fragment" data-fragment-index="1" cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red">
+          </circle>
+             <circle class="fragment" data-fragment-index="1" cx="100" cy="150" r="40" stroke="black" stroke-width="2" fill="red">
+          </circle>
+          </svg>
+          <ul>
+            <li>2 Serveurs dédiés</li>
+            <li>Serveur de configuration</li>
+            <li>Stack 1 : nginx + rails + db</li>
+            <li>HTTPS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Étape 3</h2>
+          <div style="width: 100%; border: 2px solid">
+            <div style="display: table-row; width: 100%">
+              <div style="display: table-cell; width: 100%; border: 2px solid">Polop</div>
+            </div>
+            <div style="display: table-row; width: 100%">
+              <div style="display: table-cell; width: 90%; border: 2px solid">90</div>
+              <div style="display: table-cell; width: 100%; border: 2px solid">700</div>
+            </div>
+          </div>
+          <div style="position: absolute; display: block; top: 0px; width: 50%">
+            <div style="position: absolute; display: block; width: 100%; top: 0px; border: 2px solid">plop</div>
+          </div>
+          <ul>
+            <div class="fragment fade-in"><li class="fragment fade-out">Load balancer</li></div>
+            <li>Stack 2 : nginx + rails</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Étape 4</h2>
+          <ul>
+            <li>Monitoring serveur</li>
+            <li>Monitoring applicatif</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Le monitoring, c'est complexe</h2>
+          <ul>
+            <li>Base de données répliquée</li>
+            <li>Load balancing plus en amont</li>
+          </ul>
+        </section>
+
+        <section data-background="#4a4a4a">
+          <img style="width: 60%" src="lib/img/NewRelic-logo-square-w.png">
+          <p><q>“Constantly monitoring your applications<br>
+                so you don’t have to.”</q></p>
+        </section>
+
+        <section>
+          <img src="lib/img/NR-apm-1.jpg">
+        </section>
+
+        <section>
+          <img src="lib/img/NR-apm-2.jpg">
+        </section>
+
+        <section>
+          <img src="lib/img/NR-apm-3.jpg">
+        </section>
+
+        <section>
+          <img src="lib/img/NR-servers-1.jpg">
+        </section>
+
+        <section>
+          <h2>schema sans monitoring</h2>
+        </section>
+
+        <section>
+          <h2>Reste à faire</h2>
+          <ul>
+            <li>Base de données répliquée</li>
+            <li>Meilleur load balancing</li>
+          </ul>
+        </section>
+
+        <section data-background="#4a4a4a">
+          <img style="width: 80%;" src="lib/img/shellycloud-logo.svg" alt="">
+
+          <p><q>“Platform for hosting Ruby and Ruby on Rails apps,<br>
+              focusing on the developers happiness.”</q></p>
+        </section>
+
+        <section>
+          <img src="lib/img/shellycloud.png" alt="">
+        </section>
+
+        <section>
+          <h2>Prix</h2>
+          <img src="lib/img/shellycloud-price.png" alt="">
+        </section>
+
+        <section>
+          <section>
+            <h2>Configuration</h2>
+            <p>Fichier Cloudfile</p>
+            <pre><code data-trim class="ruby condensed">
+hiptest:
+  ruby_version: 2.1.5
+  environment: production # RAILS_ENV
+  domains:
+    - hiptest.shellyapp.com
+    - hiptest.net
+    - www.hiptest.net
+  servers:
+    app1:
+      size: small
+      thin: 2
+    app2:
+      size: small
+      thin: 2
+    job1:
+      size: small
+      whenever: on
+      delayed_job: 2
+    store:
+      size: large
+      databases:
+        - postgresql
+      elasticsearch: on
+            </code></pre>
+          </section>
+
+
+          <section>
+            <h2>Modification</h2>
+            <pre class="half-column"><code data-trim class="ruby condensed">
+hiptest:
+  ruby_version: 2.1.5
+  environment: production # RAILS_ENV
+  domains:
+    - hiptest.shellyapp.com
+    - hiptest.net
+    - www.hiptest.net
+  servers:
+    app1:
+      size: small
+      thin: 2
+    app2:
+      size: small
+      thin: 2
+    job1:
+      size: small
+      whenever: on
+      delayed_job: 2
+    store:
+      size: large
+      databases:
+        - postgresql
+      elasticsearch: on
+            </code></pre>
+            <pre class="fragment half-column" data-fragment-index="1" data-trim><code data-trim class="ruby condensed">
+hiptest:
+  ruby_version: 2.1.5
+  environment: production # RAILS_ENV
+  domains:
+    - hiptest.shellyapp.com
+    - hiptest.net
+    - www.hiptest.net
+  servers:
+    app1:
+      size: small
+      thin: 2
+    app2:
+      size: small
+      thin: 2
+    job1:
+      size: small
+      whenever: on
+      delayed_job: 2
+    store:
+      size: small
+      databases:
+        - postgresql
+    esearch:
+      size: small
+      elasticsearch: on
+            </code></pre>
+            <p class="fragment" data-fragment-index="1">On modifie et on pousse</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>shelly</h2>
+            <p>Pour commander son appli du bout des doigts</p>
+            <pre><code data-trim class="no-highlight">
+            $ gem install shelly
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Connecter son repo git</h2>
+            <pre><code data-trim class="no-highlight">
+$ shelly register christophebliard@hiptest.net
+Password: [enter your password]
+Password confirmation: [enter your password]
+
+Uploading your public SSH key from /home/cbliard/.ssh/id_rsa.pub
+Successfully registered!
+Check you mailbox for email address confirmation
+            </code></pre>
+            <pre class="fragment"><code data-trim class="no-highlight">
+$ shelly setup
+Setting up example cloud
+
+Running: git remote add shelly git@git.shellycloud.com:example.git
+Running: git fetch shelly
+
+Your application is set up.
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Pousser son appli en prod</h2>
+            <pre><code data-trim class="no-highlight condensed">
+$ git push shelly master
+Counting objects: 17, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.04 KiB | 0 bytes/s, done.
+Total 10 (delta 8), reused 0 (delta 0)
+
+ ---> Received push to cloud 'hiptest'
+ ---> Checking Gemfile
+ ---> Creating code package... done.
+ ---> Deploying your application
+ ---> Deployment on server app1 started
+ ---> Deployment on server app1 finished
+ ---> Deployment on server job1 started
+ ---> Deployment on server app2 started
+ ---> Deployment on server job1 finished
+ ---> Deployment on server app2 finished
+
+ ---> Deployment successful
+To git@git.shellycloud.com:hiptest.git
+   3d493f5..7e12026  master -> master
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Logs du déploiement</h2>
+            <pre><code data-trim class="no-highlight">
+$ shelly deploys show last
+Log for deploy done on 2015-03-26 at 11:28:03
+Starting processes
+Eye started! ㋡
+Config loaded!
+Starting 'rake jobs:work' was successful
+Whenever
+[write] crontab file updated
+# Begin Whenever generated tasks for: /home/app/app/releases/3d493f57740dcc1b6b959faeee30dfbd7e3713de/config/schedule.rb
+0 6 * * * /bin/bash -l -c 'cd /home/app/app/releases/3d493f57740dcc1b6b959faeee30dfbd7e3713de && RAILS_ENV=production bundle exec rake intercom:notify --silent >> whenever.log 2>&1'
+
+# End Whenever generated tasks for: /home/app/app/releases/3d493f57740dcc1b6b959faeee30dfbd7e3713de/config/schedule.rb
+Running after successful deploy hook
+I, [2015-03-26T11:31:22.722120 #3547]  INFO -- : Notifying Appsignal of deploy with: revision: 3d493f57740dcc1b6b959faeee30dfbd7e3713de, user: christophebliard@hiptest.net
+I, [2015-03-26T11:31:22.777596 #3547]  INFO -- : Appsignal has been notified of this deploy!
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Informations</h2>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly info -c hiptest
+Cloud hiptest:
+  Region: EU
+  State: running
+
+  Deployed commit sha: 3d493f57740dcc1b6b959faeee30dfbd7e3713de
+  Deployed commit message: Enhance production exception visibility
+  Deployed by: christophe.bliard@hiptest.net
+
+  Repository URL: git@git.shellycloud.com:hiptest.git
+  Web server IP: 178.32.77.22, 178.32.77.22
+
+  Usage:
+    Filesystem:
+      Current: 2.35 GiB
+      Average: 2.33 GiB
+    Database:
+      Current: 864.65 MiB
+      Average: 817.97 MiB
+    Traffic:
+      Incoming: 3.74 GiB
+      Outgoing: 8.94 GiB
+      Total: 12.68 GiB
+
+  Statistics:
+    app1:
+      Load average: 1m: 0.42, 5m: 0.16, 15m: 0.09
+      CPU: 0.0%, MEM: 63.5%, SWAP: 6.0%
+    app2:
+      Load average: 1m: 0.01, 5m: 0.02, 15m: 0.05
+      CPU: 0.0%, MEM: 69.4%, SWAP: 6.0%
+    esearch:
+      Load average: 1m: 0.00, 5m: 0.01, 15m: 0.05
+      CPU: 0.0%, MEM: 65.6%, SWAP: 4.9%
+    job1:
+      Load average: 1m: 0.00, 5m: 0.01, 15m: 0.05
+      CPU: 0.0%, MEM: 38.7%, SWAP: 9.3%
+    store:
+      Load average: 1m: 0.08, 5m: 0.11, 15m: 0.08
+      CPU: 0.1%, MEM: 17.3%, SWAP: 5.3%
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Logs applicatifs</h2>
+            <h5 style="text-align: left; margin-left: 5%">Voir</h5>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly logs latest
+            </code></pre>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Récupérer</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly logs get
+Time: 00:00:03 [====================================] 100% Progress | Time: 00:00:03
+
+Log file saved to hiptest.log-20150327.gz
+              </code></pre>
+            </div>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">À une date précise</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly logs get 26-03-2015
+Time: 00:00:05 [====================================] 100% Progress | Time: 00:00:05
+
+Log file saved to hiptest.log-20150326.gz
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2>Accès ssh</h2>
+            <pre><code data-trim class="no-highlight">
+$ shelly ssh
+app@app2.hiptest [production] ~/app/current $
+            </code></pre>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Sur un hôte particulier</h5>
+              <pre><code data-trim class="no-highlight">
+$ shelly ssh --server job1
+app@job1.hiptest [production] ~/app/current $
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2>Console</h2>
+            <h5 style="text-align: left; margin-left: 5%">Rails</h5>
+            <pre><code data-trim class="no-highlight">
+$ shelly console
+Loading production environment (Rails 4.0.13)
+2.1.5 :001 >
+            </code></pre>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">PostgreSQL</h5>
+              <pre><code data-trim class="no-highlight">
+$ shelly dbconsole -c hiptest
+psql (9.3.5)
+Type "help" for help.
+
+hiptest=#
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2>Backups de base de données</h2>
+            <h5 style="text-align: left; margin-left: 5%">Lister</h5>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly backup list -c  hiptest
+Showing only last 10 backups.
+Use --all or -a option to list all backups.
+
+  Filename                                    |  Size    |  State
+  2015.03.23.17.02.26.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.24.05.03.10.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.24.17.02.32.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.05.05.24.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.17.02.51.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.05.10.46.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.10.15.33.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.17.02.43.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.05.04.54.hiptest.postgresql.tar  |  80 MiB  |  completed
+            </code></pre>
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Récupérer le dernier</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly backup get
+Time: 00:00:34 [================================] 100% Progress | Time: 00:00:34
+
+Backup file saved to 2015.03.27.05.04.54.hiptest.postgresql.tar
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h5 style="text-align: left; margin-left: 5%">Lancer une sauvegarde</h5>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly backup create postgresql -c hiptest
+Backup requested. It can take up to several minutes for the backup process to finish.
+            </code></pre>
+            <div class="fragment">
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly backup list -c hiptest
+Showing only last 10 backups.
+Use --all or -a option to list all backups.
+
+  Filename                                    |  Size    |  State
+  2015.03.24.17.02.32.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.05.05.24.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.17.02.51.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.05.10.46.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.10.15.33.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.17.02.43.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.05.04.54.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.17.02.20.hiptest.postgresql.tar  |  80 MiB  |  completed
+  .                                           |          |  in progress
+              </code></pre>
+            </div>
+            <div class="fragment">
+              <pre><code data-trim class="no-highlight condensed">
+# quelques minutes plus tard...
+$ shelly backup list -c hiptest
+Showing only last 10 backups.
+Use --all or -a option to list all backups.
+
+  Filename                                    |  Size    |  State
+  2015.03.24.17.02.32.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.05.05.24.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.25.17.02.51.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.05.10.46.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.10.15.33.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.26.17.02.43.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.05.04.54.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.17.02.20.hiptest.postgresql.tar  |  80 MiB  |  completed
+  2015.03.27.17.09.30.hiptest.postgresql.tar  |  80 MiB  |  completed
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h5 style="text-align: left; margin-left: 5%">Restaurer une sauvegarde</h5>
+            <pre><code data-trim class="no-highlight condensed">
+# file which you can find using command `shelly backup list`
+$ shelly backup restore 2015.03.26.10.15.33.hiptest.postgresql.tar -c hiptest
+You are about to restore postgresql database for cloud hiptest to state from
+2015.03.26.10.15.33.hiptest.postgresql.tar
+
+I want to restore the database (yes/no): no
+Canceled
+            </code></pre>
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Restaurer une sauvegarde (doc officielle)</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly backup restore 2011.11.26.04.00.10.foo.postgresql.tar.gz
+You are about restore database postgres for cloud todo-list-test to state from
+2011.11.26.04.00.10.foo.postgresql.tar.gz
+
+I want to restore the database (yes/no): yes
+Restore has been scheduled. Wait few minutes till database is restored.
+              </code></pre>
+            </div>
+
+            <aside class="notes">
+              Restauration sur poste de dév avec pg_restore
+            </aside>
+          </section>
+
+          <section>
+            <h2>Configuration SSL</h2>
+            <h5 style="text-align: left; margin-left: 5%">Création d'un point d'entrée</h5>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly endpoint create
+Endpoint was created for your cloud
+Point your domain to private IP address: 10.0.0.1
+            </code></pre>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Voir le point d'entrée créé</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly endpoint list
+Available HTTP endpoints
+
+  UUID                                  |  IP address  |  Certificate  |  SNI
+  afef1570-9e99-4836-8c87-c997d736506f  |  10.0.0.1    |  ✗            |  ✗
+              </code></pre>
+            </div>
+
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Ajout du certificat SSL</h5>
+              <pre><code data-trim class="no-highlight condensed">
+$ shelly endpoint update afef1570-9e99-4836-8c87-c997d736506f server.crt server.key
+Endpoint was updated
+Deployed certificate on front end servers.
+Point your domain to private IP address: 10.0.0.1
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2>Et d'autres</h2>
+            <pre><code data-trim class="no-highlight condensed">
+$ shelly help
+Tasks:
+  shelly add                     # Add a new cloud
+  shelly backup &lt;command&gt;        # Manage database backups
+  shelly check                   # Check if application fulfills Shelly Cloud requirements
+  shelly config &lt;command&gt;        # Manage application configuration files
+  shelly console                 # Open application console
+  shelly database &lt;command&gt;      # Manage databases
+  shelly dbconsole               # Run rails dbconsole
+  shelly delete                  # Delete the cloud
+  shelly deploy &lt;command&gt;        # View deploy logs
+  shelly endpoint &lt;command&gt;      # Manage application HTTP(S) endpoints
+  shelly file &lt;command&gt;          # Upload and download files to and from persistent storage
+  shelly help [TASK]             # Describe available tasks or one specific task
+  shelly info                    # Show basic information about cloud
+  shelly list                    # List available clouds
+  shelly login [EMAIL]           # Log into Shelly Cloud
+  shelly logout                  # Logout from Shelly Cloud
+  shelly logs &lt;command&gt;          # View application logs
+  shelly maintenance &lt;command&gt;   # Mange application maintenance events
+  shelly mongoconsole            # Run MongoDB console
+  shelly open                    # Open application page in browser
+  shelly organization &lt;command&gt;  # View organizations
+  shelly rake TASK               # Run rake task
+  shelly redeploy                # Redeploy application
+  shelly redis-cli               # Run redis-cli
+  shelly register [EMAIL]        # Register new account
+  shelly setup                   # Set up git remotes for deployment on Shelly Cloud
+  shelly ssh                     # Log into virtual server
+  shelly start                   # Start the cloud
+  shelly stop                    # Shutdown the cloud
+  shelly user &lt;command&gt;          # Manage collaborators
+  shelly version                 # Display shelly version
+
+Options:
+      [--debug]  # Show debug information
+  -h, [--help]   # Describe available tasks or one specific task
+            </code></pre>
+          </section>
+
+          <section>
+            <h2></h2>
+            <pre><code data-trim class="no-highlight condensed">
+            </code></pre>
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Récupérer le dernier</h5>
+              <pre><code data-trim class="no-highlight condensed">
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2></h2>
+            <pre><code data-trim class="no-highlight condensed">
+            </code></pre>
+            <div class="fragment">
+              <h5 style="text-align: left; margin-left: 5%">Récupérer le dernier</h5>
+              <pre><code data-trim class="no-highlight condensed">
+              </code></pre>
+            </div>
+          </section>
+
+        </section>
+
+
+        <section>
+          <h2>Configuration SSL</h2>
+          <pre><code data-trim>
+            $ shelly endpoint create
+            Endpoint was created for your cloud
+            Point your domain to private IP address: 10.0.0.1
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Passage au Cloud</h2>
+          <ul>
+            <li>NewRelic</li>
+            <li>ShellyCloud</li>
+            <li>Shippable / CircleCI</li>
+            <li>AppSignal</li>
+          </ul>
+        </section>
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>Vertical Slides</h2>
+            <p>Slides can be nested inside of each other.</p>
+            <p>Use the <em>Space</em> key to navigate through all slides.</p>
+            <br>
+            <a href="#" class="navigate-down">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section>
+            <h2>Basement Level 1</h2>
+            <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+          </section>
+          <section>
+            <h2>Basement Level 2</h2>
+            <p>That's it, time to go back up.</p>
+            <br>
+            <a href="#/2">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
+            </a>
+          </section>
+        </section>
+
+        <section>
+          <h2>Slides</h2>
+          <p>
+            Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Point of View</h2>
+          <p>
+            Press <strong>ESC</strong> to enter the slide overview.
+          </p>
+          <p>
+            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+          </p>
+        </section>
+
+        <section>
+          <h2>Touch Optimized</h2>
+          <p>
+            Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+          </p>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            ## Markdown support
+
+            Write content using inline or external Markdown.
+            Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+            ```
+            <section data-markdown>
+              ## Markdown support
+
+              Write content using inline or external Markdown.
+              Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+            </section>
+            ```
+          </script>
+        </section>
+
+        <section>
+          <section id="fragments">
+            <h2>Fragments</h2>
+            <p>Hit the next arrow...</p>
+            <p class="fragment">... to step through ...</p>
+            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+            <aside class="notes">
+              This slide has fragments which are also stepped through in the notes window.
+            </aside>
+          </section>
+          <section>
+            <h2>Fragment Styles</h2>
+            <p>There's different types of fragments, like:</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+            <p class="fragment roll-in">roll-in</p>
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment current-visible">current-visible</p>
+            <p class="fragment highlight-red">highlight-red</p>
+            <p class="fragment highlight-blue">highlight-blue</p>
+          </section>
+        </section>
+
+        <section id="transitions">
+          <h2>Transition Styles</h2>
+          <p>
+            You can select from different transitions, like: <br>
+            <a href="?transition=none#/transitions">None</a> -
+            <a href="?transition=fade#/transitions">Fade</a> -
+            <a href="?transition=slide#/transitions">Slide</a> -
+            <a href="?transition=convex#/transitions">Convex</a> -
+            <a href="?transition=concave#/transitions">Concave</a> -
+            <a href="?transition=zoom#/transitions">Zoom</a>
+          </p>
+        </section>
+
+        <section id="themes">
+          <h2>Themes</h2>
+          <p>
+            reveal.js comes with a few themes built in: <br>
+            <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+          </p>
+        </section>
+
+        <section>
+          <section data-background="#dddddd">
+            <h2>Slide Backgrounds</h2>
+            <p>
+              Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+            </p>
+            <a href="#" class="navigate-down">
+              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+            </a>
+          </section>
+          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+            <h2>Image Backgrounds</h2>
+            <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+          </section>
+          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+            <h2>Tiled Backgrounds</h2>
+            <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+          </section>
+          <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+              <h2>Video Backgrounds</h2>
+              <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+            </div>
+          </section>
+        </section>
+
+        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+          <h2>Background Transitions</h2>
+          <p>
+            Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+          </p>
+          <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+        </section>
+
+        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+          <h2>Background Transitions</h2>
+          <p>
+            You can override background transitions per-slide.
+          </p>
+          <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+          </code></pre>
+          <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        </section>
+
+        <section>
+          <h2>Marvelous List</h2>
+          <ul>
+            <li>No order here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+            <li>Or here</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fantastic Ordered List</h2>
+          <ol>
+            <li>One is smaller than...</li>
+            <li>Two is smaller than...</li>
+            <li>Three!</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Tabular Tables</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Value</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apples</td>
+                <td>$1</td>
+                <td>7</td>
+              <tr>
+              <tr>
+                <td>Lemonade</td>
+                <td>$2</td>
+                <td>18</td>
+              <tr>
+              <tr>
+                <td>Bread</td>
+                <td>$3</td>
+                <td>2</td>
+              <tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Clever Quotes</h2>
+          <p>
+            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+          </p>
+          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+          </blockquote>
+        </section>
+
+        <section>
+          <h2>Intergalactic Interconnections</h2>
+          <p>
+            You can link between slides internally,
+            <a href="#/2/3">like this</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Speaker View</h2>
+          <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+          <p>Press the <em>S</em> key to try it out.</p>
+
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
+
+        <section>
+          <h2>Export to PDF</h2>
+          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+        </section>
+
+        <section>
+          <h2>Global State</h2>
+          <p>
+            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+            will be added as a class to the document element when the slide is open. This lets you
+            apply broader style changes, like switching the page background.
+          </p>
+        </section>
+
+        <section data-state="customevent">
+          <h2>State Events</h2>
+          <p>
+            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+          </p>
+          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+  console.log( '"customevent" has fired' );
+} );
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Take a Moment</h2>
+          <p>
+            Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+          </p>
+        </section>
+
+        <section>
+          <h2>Much more</h2>
+          <ul>
+            <li>Right-to-left support</li>
+            <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+            <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+          </ul>
+        </section>
+
+        <section style="text-align: left;">
+          <h1>THE END</h1>
+          <p>
+            - <a href="http://slides.com">Try the online editor</a> <br>
+            - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+          </p>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

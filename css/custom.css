@@ -1,0 +1,22 @@
+.reveal section img {
+  background:none;
+  border:none;
+  box-shadow:none;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-transform: inherit;
+}
+
+.reveal pre code.condensed {
+  font-size: 0.75em;
+  line-height: 1.1em;
+  max-height: 500px;
+}
+
+.reveal pre.half-column {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+  vertical-align: top;
+}
