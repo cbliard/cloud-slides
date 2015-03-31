@@ -771,6 +771,122 @@ Options:
         </section>
 
         <section>
+          <section data-background="#4a4a4a">
+            <img style="width: 80%;" src="lib/img/shippable-logo-white.png">
+            <p><q>Ship fast, evolve faster</q></p>
+          </section>
+
+          <section>
+            <img src="lib/img/shippable-dashboard.jpg">
+          </section>
+
+          <section>
+            <h2>Configuration - shippable.yml</h2>
+            <pre><code data-trim class="ruby condensed">
+# Configuration file for Shippable
+# Shippable provides continuous integration in the cloud
+build_environment: ubuntu1204
+language: ruby
+rvm:
+  - 2.1.5
+
+# Enable cached containers, reset with [reset_minion] in commit message.
+cache: true
+# Enable archiving the shippable/ directory as an artifact to download
+archive: true
+
+services:
+  # sets elasticsearch on localhost, port 9200
+  - elasticsearch
+
+script:
+  - rm -f log/test.log
+  - bin/rspec --format RspecJunitFormatter --out shippable/testresults/rspec.xml
+
+# http://docs.shippable.com/en/latest/config.html#email-notification
+notifications:
+  email:
+    recipients:
+      - devs@hiptest.net
+    on_success: change
+    on_failure: always
+            </code></pre>
+          </section>
+          <section>
+            <h2>Personnalisation - shippable.yml</h2>
+            <pre><code data-trim class="ruby condensed">
+env:
+  global:
+    # devise_secret_token
+    - secure: pGUq5116iDVWh6R4/ZOfPxIZj8Vqn4FXS6jmZKyHk99ln20EWX4Ie2xsPSwgFJcOFA==
+
+branches:
+  only:
+    - master
+
+before_install:  # make chromedriver available
+  - "curl -o /tmp/chromedriver.zip -L http://chromedriver.storage.googleapis.com/2.10/chromedriver_linux64.zip"
+  - "unzip -o /tmp/chromedriver.zip -d /home/shippable/bin"
+  - "chmod +x /home/shippable/bin/chromedriver"
+  - "printf '#!/bin/bash\nexec /usr/bin/chrome --no-sandbox --disable-gpu \"$@\"\n' | sudo tee /usr/bin/google-chrome"
+  - "sudo chmod +x /home/shippable/bin/chromedriver /usr/bin/google-chrome"
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "/etc/init.d/xvfb start"
+
+after_script:
+  - "/etc/init.d/xvfb stop"
+
+after_success:  # push to production
+  - "git push shelly master"
+
+after_failure:  # save some test logs
+  - "mv log/test.log shippable/"
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="lib/img/shippable-hiptest-build.jpg">
+          </section>
+        </section>
+
+        <section>
+          <section data-background="#4a4a4a">
+            <img style="width: 80%;" src="lib/img/circleci-horizontal-dark.svg">
+            <p><q>Ship better code, faster.</q></p>
+          </section>
+
+          <section>
+            <img src="lib/img/circleci-dashboard.jpg">
+          </section>
+
+          <section>
+            <h2>Configuration - shippable.yml</h2>
+            <pre><code data-trim class="ruby condensed">
+# Setup services
+dependencies:
+  post:
+    # install custom version of elasticsearch
+    # See https://circleci.com/docs/installing-elasticsearch
+    - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.3.tar.gz
+    - tar -xvf elasticsearch-1.0.3.tar.gz
+    - elasticsearch-1.0.3/bin/elasticsearch: {background: true}
+    - sleep 10 # wait elasticsearch start
+
+test:
+  override:
+    - "bundle exec rspec":
+        timeout: 3600
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="lib/img/circleci-hiptest-build.jpg">
+          </section>
+        </section>
+
+        <section>
           <h2>Passage au Cloud</h2>
           <ul>
             <li>NewRelic</li>
