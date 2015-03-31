@@ -180,115 +180,87 @@ Sites sympas :
         <section data-background="lib/img/hiptest-homepage.jpg" data-background-size="100%">
         </section>
 
-        <section>
-          <h2>Étape 1</h2>
-          <ul>
-            <li>code sur GitHub</li>
-            <li>Intégration continue Jenkins</li>
-            <li>Déploiement continu serveur dédié OVH avec Capistrano</li>
-            <li>Sauvegarde journalière db</li222222>
-          </ul>
+        <!-- 1 server with continuous deployment -->
+        <section data-background="lib/img/Infra01.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra02.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra03.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra04.svg" data-background-size="100%"></section>
+
+        <!-- multiple virtual servers, one full stack -->
+        <section data-background="lib/img/Infra05.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra06.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra07.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra08.svg" data-background-size="100%"></section>
+
+
+        <!-- multiple virtual servers, two full stacks -->
+        <section data-background="lib/img/Infra09.svg" data-background-size="100%"></section>
+
+        <!-- multiple ci slaves -->
+        <section data-background="lib/img/Infra10.svg" data-background-size="100%"></section>
+
+        <!-- add backup server -->
+        <section data-background="lib/img/Infra11.svg" data-background-size="100%"></section>
+
+        <!-- add monitoring server -->
+        <section data-background="lib/img/Infra12.svg" data-background-size="100%"></section>
+
+        <!-- add elasticsearch server -->
+        <section data-background="lib/img/Infra13.svg" data-background-size="100%"></section>
+
+        <section data-transition="fade">
+          <h2>Le monitoring, c'est un métier</h2>
         </section>
 
         <section>
-          <h2>Étape 2</h2>
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-             <circle class="fragment" data-fragment-index="1" cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red">
-          </circle>
-             <circle class="fragment" data-fragment-index="1" cx="100" cy="150" r="40" stroke="black" stroke-width="2" fill="red">
-          </circle>
-          </svg>
-          <ul>
-            <li>2 Serveurs dédiés</li>
-            <li>Serveur de configuration</li>
-            <li>Stack 1 : nginx + rails + db</li>
-            <li>HTTPS</li>
-          </ul>
+          <section data-background="#4a4a4a">
+            <img style="width: 60%" src="lib/img/NewRelic-logo-square-w.png">
+            <p><q>“Constantly monitoring your applications<br>
+                  so you don’t have to.”</q></p>
+          </section>
+
+          <section>
+            <img src="lib/img/NR-apm-1.jpg">
+          </section>
+
+          <section>
+            <img src="lib/img/NR-apm-2.jpg">
+          </section>
+
+          <section>
+            <img src="lib/img/NR-apm-3.jpg">
+          </section>
+
+          <section>
+            <img src="lib/img/NR-servers-1.jpg">
+          </section>
+        </section>
+
+        <!-- add newrelic -->
+        <section data-background="lib/img/Infra14.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra15.svg" data-background-size="100%">
+          <aside class="notes">
+            Reste à développer: base de données maitre/esclave
+            + meilleure répartition de charge.
+          </aside>
         </section>
 
         <section>
-          <h2>Étape 3</h2>
-          <div style="width: 100%; border: 2px solid">
-            <div style="display: table-row; width: 100%">
-              <div style="display: table-cell; width: 100%; border: 2px solid">Polop</div>
-            </div>
-            <div style="display: table-row; width: 100%">
-              <div style="display: table-cell; width: 90%; border: 2px solid">90</div>
-              <div style="display: table-cell; width: 100%; border: 2px solid">700</div>
-            </div>
-          </div>
-          <div style="position: absolute; display: block; top: 0px; width: 50%">
-            <div style="position: absolute; display: block; width: 100%; top: 0px; border: 2px solid">plop</div>
-          </div>
-          <ul>
-            <div class="fragment fade-in"><li class="fragment fade-out">Load balancer</li></div>
-            <li>Stack 2 : nginx + rails</li>
-          </ul>
-        </section>
+          <section data-background="#4a4a4a">
+            <img style="width: 80%;" src="lib/img/shellycloud-logo.svg" alt="">
+            <p><q>“Platform for hosting Ruby and Ruby on Rails apps,<br>
+                focusing on the developers happiness.”</q></p>
+          </section>
 
-        <section>
-          <h2>Étape 4</h2>
-          <ul>
-            <li>Monitoring serveur</li>
-            <li>Monitoring applicatif</li>
-          </ul>
-        </section>
+          <section>
+            <img src="lib/img/shellycloud.png" alt="">
+          </section>
 
-        <section>
-          <h2>Le monitoring, c'est complexe</h2>
-          <ul>
-            <li>Base de données répliquée</li>
-            <li>Load balancing plus en amont</li>
-          </ul>
-        </section>
-
-        <section data-background="#4a4a4a">
-          <img style="width: 60%" src="lib/img/NewRelic-logo-square-w.png">
-          <p><q>“Constantly monitoring your applications<br>
-                so you don’t have to.”</q></p>
-        </section>
-
-        <section>
-          <img src="lib/img/NR-apm-1.jpg">
-        </section>
-
-        <section>
-          <img src="lib/img/NR-apm-2.jpg">
-        </section>
-
-        <section>
-          <img src="lib/img/NR-apm-3.jpg">
-        </section>
-
-        <section>
-          <img src="lib/img/NR-servers-1.jpg">
-        </section>
-
-        <section>
-          <h2>schema infra sans monitoring</h2>
-        </section>
-
-        <section>
-          <h2>Reste à faire</h2>
-          <ul>
-            <li>Base de données répliquée</li>
-            <li>Meilleur load balancing</li>
-          </ul>
-        </section>
-
-        <section data-background="#4a4a4a">
-          <img style="width: 80%;" src="lib/img/shellycloud-logo.svg" alt="">
-          <p><q>“Platform for hosting Ruby and Ruby on Rails apps,<br>
-              focusing on the developers happiness.”</q></p>
-        </section>
-
-        <section>
-          <img src="lib/img/shellycloud.png" alt="">
-        </section>
-
-        <section>
-          <h2>Prix</h2>
-          <img src="lib/img/shellycloud-price.png" alt="">
+          <section>
+            <h2>Prix</h2>
+            <img src="lib/img/shellycloud-price.png" alt="">
+            <h5>20 € offerts à l'inscription</h5>
+          </section>
         </section>
 
         <section>
@@ -706,7 +678,7 @@ Point your domain to private IP address: 10.0.0.1
           </section>
 
           <section>
-            <h2>Et d'autres</h2>
+            <h2>Et d'autres...</h2>
             <pre><code data-trim class="no-highlight condensed">
 $ shelly help
 Tasks:
@@ -758,9 +730,13 @@ Options:
           <img src="lib/img/shellycloud-diagram.png">
         </section>
 
-        <section>
-          <p>Là, mettre les schémas d'infra sur notre évolution</p>
-        </section>
+        <!-- Use Shelly Cloud -->
+        <section data-background="lib/img/Infra17.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra18.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra19.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra20.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra21.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra22.svg" data-background-size="100%"></section>
 
         <section data-background="#4a4a4a">
           <img style="width: 80%;" src="lib/img/shippable-logo-white.png">
@@ -886,6 +862,16 @@ test:
           </section>
         </section>
 
+        <section data-background="lib/img/Infra24.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra25.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra27.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra29.svg" data-background-size="100%"></section>
+
+        <section>
+          <h2>Que retenir ?</h2>
+          <img src="lib/img/brain.svg">
+          <aside class="notes">http://commons.wikimedia.org/wiki/File:Red_Silhouette_-_Brain.svg</aside>
+        </section>
         <section>
           <h2>Passage au Cloud</h2>
           <ul>
