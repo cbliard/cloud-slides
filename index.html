@@ -92,39 +92,101 @@
 
         <section>
           <h2>Pizza !</h2>
-          <ul>
-            <li>Table</li>
-            <li>Boissons</li>
-            <li>Électricité/Gaz</li>
-            <li>Four</li>
-            <li>Cuisson</li>
-            <li>Fromage</li>
-            <li>Garniture</li>
-            <li>Sauce tomate</li>
-            <li>Pâte à pizza</li>
-          </ul>
-          <aside class="notes">
-            Faite maison
-            Prête à cuire
-            Livrée
-            Sortie resto
-          </aside>
+          <table class="stacked">
+            <thead>
+              <th class="fragment" data-fragment-index="9"></th>
+              <th class="fragment" data-fragment-index="10">Faite maison</th>
+              <th class="fragment" data-fragment-index="11">Prête à cuire</th>
+              <th class="fragment" data-fragment-index="12">Livrée à domicile</th>
+              <th class="fragment" data-fragment-index="13">Sortie restaurant</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fragment" data-fragment-index="9">Couverts</td>
+                <td rowspan="9" class="fragment us" data-fragment-index="10"></td>
+                <td rowspan="5" class="fragment us" data-fragment-index="11"></td>
+                <td rowspan="2" class="fragment us" data-fragment-index="12"></td>
+                <td rowspan="9" class="fragment vendor" data-fragment-index="13"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="8">Huile piquante</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="7">Électricité/Gaz</td>
+                <td rowspan="7" class="fragment vendor" data-fragment-index="12"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="6">Cuisson</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="5">Four</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="4">Fromage</td>
+                <td rowspan="4" class="fragment vendor" data-fragment-index="11"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="3">Garniture</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="2">Sauce tomate</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="1">Pâte à pizza</td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
         </section>
 
         <section>
           <section>
             <h2>Logiciel !</h2>
-            <ul>
-              <li>Applications</li>
-              <li>Données</li>
-              <li>Runtime</li>
-              <li>Middleware</li>
-              <li>Système d'exploitation</li>
-              <li>Virtualisation</li>
-              <li>Serveurs</li>
-              <li>Stockage</li>
-              <li>Réseau</li>
-            </ul>
+            <table class="stacked">
+              <thead>
+                <th class="fragment" data-fragment-index="9"></th>
+                <th class="fragment" data-fragment-index="10">Sur site</th>
+                <th class="fragment" data-fragment-index="11">IaaS</th>
+                <th class="fragment" data-fragment-index="12">PaaS</th>
+                <th class="fragment" data-fragment-index="13">SaaS</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fragment" data-fragment-index="9">Applications</td>
+                  <td rowspan="9" class="fragment us" data-fragment-index="10"></td>
+                  <td rowspan="5" class="fragment us" data-fragment-index="11"></td>
+                  <td rowspan="2" class="fragment us" data-fragment-index="12"></td>
+                  <td rowspan="9" class="fragment vendor" data-fragment-index="13"></td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="8">Données</td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="7">Runtime</td>
+                  <td rowspan="7" class="fragment vendor" data-fragment-index="12"></td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="6">Middleware</td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="5">Système (OS)</td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="4">Virtualisation</td>
+                  <td rowspan="4" class="fragment vendor" data-fragment-index="11"></td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="3">Serveurs</td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="2">Stockage</td>
+                </tr>
+                <tr>
+                  <td class="fragment" data-fragment-index="1">Réseau</td>
+                </tr>
+                <tr>
+              </tbody>
+            </table>
           </section>
 
           <section>
@@ -867,11 +929,47 @@ test:
         <section data-background="lib/img/Infra27.svg" data-background-size="100%"></section>
         <section data-background="lib/img/Infra29.svg" data-background-size="100%"></section>
 
-        <section>
-          <h2>Que retenir ?</h2>
-          <img src="lib/img/brain.svg">
-          <aside class="notes">http://commons.wikimedia.org/wiki/File:Red_Silhouette_-_Brain.svg</aside>
+        <section data-background="lib/img/stroopwafels.jpg">
+          <section>
+            <div style="background-color: rgba(255,255,255, 0.8); margin: 0 -20%; padding: 2% 20%">
+              <img src="lib/img/appsignal-logo.svg">
+              <p style="color: #444;"><q>Your Ruby apps can run smoother.</q></p>
+            </div>
+          </section>
+
+          <section><img src="lib/img/appsignal-graphs.jpg"></section>
+          <section><img src="lib/img/appsignal-errors.jpg"></section>
+          <section><img src="lib/img/appsignal-performance.jpg"></section>
+          <section><img src="lib/img/appsignal-perf-view1.jpg"></section>
+          <section><img src="lib/img/appsignal-perf-view2.jpg"></section>
         </section>
+
+        <section data-background="lib/img/Infra29.svg" data-background-size="100%"></section>
+        <section data-background="lib/img/Infra30.svg" data-background-size="100%">
+          <aside class="notes">
+            Google docs, calendar, mail, 5€/mois/user,
+            Intercom pour gestion clients
+            Zopim chat inline
+          </aside>
+        </section>
+
+        <section data-background="lib/img/brain.svg" data-background-size="50%">
+          <h2>Que retenir de notre expérience ?</h2>
+          <p>Maintenance fortement réduite</p>
+          <p>Meilleure focalisation sur notre métier</p>
+          <p>Coût</p>
+          <p>Flexible</p>
+          <p>Moins de contrôle</p>
+          <p>Sécurité des données</p>
+          <p style="color: #666; font-size: 0.3em;">http://commons.wikimedia.org/wiki/File:Red_Silhouette_-_Brain.svg</p>
+          <aside class="notes">
+            Sécurité : identité, accès
+            Conformité
+            Performances
+            Mobilité des données
+          </aside>
+        </section>
+
         <section>
           <h2>Passage au Cloud</h2>
           <ul>

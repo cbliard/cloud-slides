@@ -20,3 +20,34 @@
   margin: 10px;
   vertical-align: top;
 }
+
+.reveal table.stacked {
+  font-size: 0.8em;
+}
+
+.reveal table.stacked th {
+  text-align: center;
+  vertical-align: middle;
+  width: 17%;
+}
+
+.reveal table.stacked td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.reveal table.stacked td.us {
+  background-color: blue;
+}
+
+.reveal table.stacked td.us:before {
+  content: "Vous";
+}
+
+.reveal table.stacked td.vendor {
+  background-color: green;
+}
+
+.reveal table.stacked td.vendor:before {
+  content: "Vendeur";
+}
