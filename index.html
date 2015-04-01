@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+    <title>Développeurs, gagnez du temps avec le Cloud</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Retour d'expérience sur notre gain en productivité grâce à divers PaaS et SaaS">
+    <meta name="author" content="Christophe Bliard">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -41,45 +41,38 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section>
+        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
+          <br>
+          <br>
           <h1>Développeurs,</h1>
           <h1>Gagnez du temps</h1>
           <h1>avec le Cloud</h1>
           <p>
-            <small>Christophe Bliard / <a href="http://twitter.com/cbliard">@cbliard</a></small>
+            <small>Christophe Bliard / <a href="http://twitter.com/cbliard">@cbliard</a></small><br>
+            <small>Développeur <a href="https://hiptest.net">Hiptest</a></small>
           </p>
+          <p style="font-size: 0.3em;">Photo par lennysan <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/lennysan/4403695597/</p>
+          <aside class="notes">
+            avant : Dév Python &amp; Java/JEE,
+            maintenant : Dév Ruby On Rails + emberjs + sysadmin</aside>
         </section>
 
-        <section>
-          <h2>À propos</h2>
-          <p>
-            Ancien développeur Java/J2EE
-          </p>
-          <p>
-            Développeur Ruby on Rails &amp; Ember.js pour Hiptest
-          </p>
-          <p>
-            <i>Afficher "Avant : des logos", puis "Après : des logos", et enfin avoir quelques logos qui s'effacent
-            </i>
-          </p>
-        </section>
-
-        <section>
+        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
           <h2>Plan</h2>
           <p>Cloud ?</p>
           <p>Notre usage</p>
           <p>Autres usages</p>
+          <aside class="notes">
+            C'est un retour d'expérience, donc non exhaustif
+            Il s'agit d'une discussion, d'un échange
+            Interventions bienvenues, on est tous là pour apprendre
+          </aside>
         </section>
 
-        <section>
-          <h2>Avertissement</h2>
-          <p>Ceci est une discussion</p>
-        </section>
-
-        <section>
+        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
           <h2>Cloud Computing</h2>
           <h2>IaaS, PaaS, SaaS ?</h2>
-          <h5>wtf ?</h5>
+          <h5>wtf ?...</h5>
           <aside class="notes">
             Cloud computing is in a nutshell the delivery of compute / applications / storage as a service to consumers of the service.  The term cloud comes from the fact a cloud like symbol is often used to denote cloud services as per the diagram above.  The users / consumers of the service at a high level only need to know how to connect to the service, they do not need to have any knowledge of what underpins or provides the service in order to use it.
 
@@ -90,11 +83,11 @@
           </aside>
         </section>
 
-        <section>
+        <section data-background="lib/img/pizza.jpg" class="shadow">
           <h2>Pizza !</h2>
           <table class="stacked">
             <thead>
-              <th class="fragment" data-fragment-index="9"></th>
+              <th class="fragment invisible" data-fragment-index="9"></th>
               <th class="fragment" data-fragment-index="10">Faite maison</th>
               <th class="fragment" data-fragment-index="11">Prête à cuire</th>
               <th class="fragment" data-fragment-index="12">Livrée à domicile</th>
@@ -137,100 +130,74 @@
               <tr>
             </tbody>
           </table>
+          <p style="font-size: 0.3em;">Photo par djwtwo <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/djwtwo/9864611814/</p>
         </section>
 
-        <section>
-          <section>
-            <h2>Logiciel !</h2>
-            <table class="stacked">
-              <thead>
-                <th class="fragment" data-fragment-index="9"></th>
-                <th class="fragment" data-fragment-index="10">Sur site</th>
-                <th class="fragment" data-fragment-index="11">IaaS</th>
-                <th class="fragment" data-fragment-index="12">PaaS</th>
-                <th class="fragment" data-fragment-index="13">SaaS</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="fragment" data-fragment-index="9">Applications</td>
-                  <td rowspan="9" class="fragment us" data-fragment-index="10"></td>
-                  <td rowspan="5" class="fragment us" data-fragment-index="11"></td>
-                  <td rowspan="2" class="fragment us" data-fragment-index="12"></td>
-                  <td rowspan="9" class="fragment vendor" data-fragment-index="13"></td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="8">Données</td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="7">Runtime</td>
-                  <td rowspan="7" class="fragment vendor" data-fragment-index="12"></td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="6">Middleware</td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="5">Système (OS)</td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="4">Virtualisation</td>
-                  <td rowspan="4" class="fragment vendor" data-fragment-index="11"></td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="3">Serveurs</td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="2">Stockage</td>
-                </tr>
-                <tr>
-                  <td class="fragment" data-fragment-index="1">Réseau</td>
-                </tr>
-                <tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section>
-            <h2>Infrastructure as a Service</h2>
-            <ul>
-              <li>Matériel à la demande</li>
-              <li>Migrez</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Platform as a Service</h2>
-            <ul>
-              <li>Briques logicielles à la demande</li>
-              <li>Construisez</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Software as a Service</h2>
-            <ul>
-              <li>Logiciel à la demande</li>
-              <li>Utilisez</li>
-            </ul>
-          </section>
+        <section data-background="lib/img/software.jpg" class="shadow">
+          <h2>Logiciel !</h2>
+          <table class="stacked">
+            <thead>
+              <th class="fragment invisible" data-fragment-index="9"></th>
+              <th class="fragment" data-fragment-index="10">Sur site</th>
+              <th class="fragment" data-fragment-index="11">IaaS</th>
+              <th class="fragment" data-fragment-index="12">PaaS</th>
+              <th class="fragment" data-fragment-index="13">SaaS</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fragment" data-fragment-index="9">Applications</td>
+                <td rowspan="9" class="fragment us" data-fragment-index="10"></td>
+                <td rowspan="5" class="fragment us" data-fragment-index="11"></td>
+                <td rowspan="2" class="fragment us" data-fragment-index="12"></td>
+                <td rowspan="9" class="fragment vendor" data-fragment-index="13"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="8">Données</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="7">Runtime</td>
+                <td rowspan="7" class="fragment vendor" data-fragment-index="12"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="6">Middleware</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="5">Système (OS)</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="4">Virtualisation</td>
+                <td rowspan="4" class="fragment vendor" data-fragment-index="11"></td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="3">Serveurs</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="2">Stockage</td>
+              </tr>
+              <tr>
+                <td class="fragment" data-fragment-index="1">Réseau</td>
+              </tr>
+              <tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.3em;">Photo par camknows <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/camknows/3726757043/</p>
+          <aside class="notes">
+            IaaS : Matériel à la demande, migrer
+            PaaS : Briques logicielles à la demande, construire
+            SaaS : Logiciel à la demande, Utiliser
+          </aside>
         </section>
 
-<!--
-Sites sympas :
-  - https://kevinfielder.wordpress.com/2012/06/21/very-simple-introduction-to-cloud-computing/
-  - http://www.kheops.org/solutions/architecte-cloud/iaas-saas-paas
-  - http://www.culture-informatique.net/cest-quoi-le-cloud-2/
-  - http://support.cloudwatt.com/kb/faq/lecloud/iaas-paas-saas-definition.html
--->
-
-        <section>
+        <section data-background="lib/img/leaf.jpg" class="shadow">
           <h2>Autres aspects</h2>
           <ul>
-            <li>Cloud public/privé/hybride</li>
-            <li>Paiement à l'usage</li>
-            <li>Flexibilité</li>
-            <li>Mise à jour en continu</li>
-            <li>ATAWAD</li>
+            <p class="fragment">Cloud public/privé/hybride</p>
+            <p class="fragment">Paiement à l'usage</p>
+            <p class="fragment">Flexibilité</p>
+            <p class="fragment">Mise à jour en continu</p>
+            <p class="fragment">ATAWAD</p>
           </ul>
+          <p style="font-size: 0.3em; margin-top: 15%">Photo par mightyboybrian <img src="lib/img/by-nc.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/mightyboybrian/5732782815/</p>
         </section>
 
         <section data-transition="zoom" data-background="#4a4a4a">
@@ -270,8 +237,10 @@ Sites sympas :
         <!-- add elasticsearch server -->
         <section data-background="lib/img/Infra13.svg" data-background-size="100%"></section>
 
-        <section data-transition="fade">
-          <h2>Le monitoring, c'est un métier</h2>
+        <section data-transition="fade" data-background="lib/img/measure.jpg" class="shadow">
+          <p style="margin-bottom: 27%"></p>
+          <h2>Mesurer, c'est un métier</h2>
+          <p style="font-size: 0.3em; margin-top: 27%">Photo par orkomedix <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/orkomedix/4413901705/</p>
         </section>
 
         <section>
@@ -413,6 +382,10 @@ hiptest:
             </code></pre>
             <p class="fragment" data-fragment-index="1">On modifie et on pousse</p>
           </section>
+        </section>
+
+        <section>
+          <img src="lib/img/shellycloud-diagram.png">
         </section>
 
         <section>
@@ -783,14 +756,7 @@ Options:
           </section>
         </section>
 
-        <section>
-          <p>Mettre un wow doge?</p>
-          <p>http://knowyourmeme.com/memes/doge</p>
-        </section>
-
-        <section>
-          <img src="lib/img/shellycloud-diagram.png">
-        </section>
+        <section data-background="lib/img/doge.jpg"></section>
 
         <!-- Use Shelly Cloud -->
         <section data-background="lib/img/Infra17.svg" data-background-size="100%"></section>
@@ -819,7 +785,7 @@ Options:
           </section>
 
           <section>
-            <h2>Configuration - shippable.yml</h2>
+            <h2>Configuration • shippable.yml</h2>
             <pre><code data-trim class="ruby condensed">
 # Configuration file for Shippable
 # Shippable provides continuous integration in the cloud
@@ -851,7 +817,7 @@ notifications:
             </code></pre>
           </section>
           <section>
-            <h2>Personnalisation - shippable.yml</h2>
+            <h2>Personnalisation • shippable.yml</h2>
             <pre><code data-trim class="ruby condensed">
 env:
   global:
@@ -900,7 +866,7 @@ after_failure:  # save some test logs
           </section>
 
           <section>
-            <h2>Configuration - shippable.yml</h2>
+            <h2>Configuration • shippable.yml</h2>
             <pre><code data-trim class="ruby condensed">
 # Setup services
 dependencies:
@@ -950,17 +916,19 @@ test:
             Google docs, calendar, mail, 5€/mois/user,
             Intercom pour gestion clients
             Zopim chat inline
+            GitHub pages pour la doc
           </aside>
         </section>
 
         <section data-background="lib/img/brain.svg" data-background-size="50%">
           <h2>Que retenir de notre expérience ?</h2>
-          <p>Maintenance fortement réduite</p>
-          <p>Meilleure focalisation sur notre métier</p>
-          <p>Coût</p>
-          <p>Flexible</p>
-          <p>Moins de contrôle</p>
-          <p>Sécurité des données</p>
+          <p class="fragment">Maintenance fortement réduite</p>
+          <p class="fragment">Meilleure focalisation sur notre métier</p>
+          <p class="fragment">Coût similaire</p>
+          <p class="fragment">Plus de fonctionnalités</p>
+          <p class="fragment">Plus flexible</p>
+          <p class="fragment">Moins de contrôle</p>
+          <p class="fragment">Sécurité des données</p>
           <p style="color: #666; font-size: 0.3em;">http://commons.wikimedia.org/wiki/File:Red_Silhouette_-_Brain.svg</p>
           <aside class="notes">
             Sécurité : identité, accès
@@ -970,362 +938,117 @@ test:
           </aside>
         </section>
 
-        <section>
-          <h2>Passage au Cloud</h2>
-          <ul>
-            <li>NewRelic</li>
-            <li>ShellyCloud</li>
-            <li>Shippable / CircleCI</li>
-            <li>AppSignal</li>
-          </ul>
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <p style="margin-bottom: 27%"></p>
+          <h2>Autres acteurs ?</h2>
+          <p style="font-size: 0.3em; margin-top: 27%">Photo par cobalt <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/cobalt/3300229318/</p>
         </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Example of nested vertical slides -->
-        <section>
+        <section data-background="lib/img/macro.jpg" class="shadow">
           <section>
-            <h2>Vertical Slides</h2>
-            <p>Slides can be nested inside of each other.</p>
-            <p>Use the <em>Space</em> key to navigate through all slides.</p>
-            <br>
-            <a href="#" class="navigate-down">
-              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
+            <h2>paasify.it</h2>
+            <img src="lib/img/other-paasifyit.jpg">
           </section>
+
+          <section><img src="lib/img/other-paasifyit-search.jpg"></section>
+          <section><img src="lib/img/other-paasifyit-results.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
           <section>
-            <h2>Basement Level 1</h2>
-            <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+            <h2>Quelques PaaS</h2>
           </section>
+          <section><h2>Heroku</h2><img src="lib/img/other-heroku.jpg"></section>
+          <section><h2>Scalingo</h2><img src="lib/img/other-scalingo.jpg"></section>
+          <section><h2>Deliverous</h2><img src="lib/img/other-deliverous.jpg"></section>
+          <section><h2>Clever Cloud</h2><img src="lib/img/other-clevercloud.jpg"></section>
+          <section><h2>Divshot</h2><img src="lib/img/other-divshot.jpg"></section>
+          <section><h2>Firebase</h2><img src="lib/img/other-firebase.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
           <section>
-            <h2>Basement Level 2</h2>
-            <p>That's it, time to go back up.</p>
-            <br>
-            <a href="#/2">
-              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-            </a>
+            <h2>Quelques SaaS</h2>
+            <h5>Monitoring</h5>
           </section>
+          <section><h2>Skylight</h2><img src="lib/img/other-skylight.jpg"></section>
+          <section><h2>Datadog</h2><img src="lib/img/other-datadog.jpg"></section>
         </section>
 
-        <section>
-          <h2>Slides</h2>
-          <p>
-            Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Point of View</h2>
-          <p>
-            Press <strong>ESC</strong> to enter the slide overview.
-          </p>
-          <p>
-            Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-          </p>
-        </section>
-
-        <section>
-          <h2>Touch Optimized</h2>
-          <p>
-            Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-          </p>
-        </section>
-
-        <section data-markdown>
-          <script type="text/template">
-            ## Markdown support
-
-            Write content using inline or external Markdown.
-            Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-            ```
-            <section data-markdown>
-              ## Markdown support
-
-              Write content using inline or external Markdown.
-              Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-            </section>
-            ```
-          </script>
-        </section>
-
-        <section>
-          <section id="fragments">
-            <h2>Fragments</h2>
-            <p>Hit the next arrow...</p>
-            <p class="fragment">... to step through ...</p>
-            <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-            <aside class="notes">
-              This slide has fragments which are also stepped through in the notes window.
-            </aside>
-          </section>
+        <section data-background="lib/img/macro.jpg" class="shadow">
           <section>
-            <h2>Fragment Styles</h2>
-            <p>There's different types of fragments, like:</p>
-            <p class="fragment grow">grow</p>
-            <p class="fragment shrink">shrink</p>
-            <p class="fragment roll-in">roll-in</p>
-            <p class="fragment fade-out">fade-out</p>
-            <p class="fragment current-visible">current-visible</p>
-            <p class="fragment highlight-red">highlight-red</p>
-            <p class="fragment highlight-blue">highlight-blue</p>
+            <h2>Quelques SaaS</h2>
+            <h3>Développement</h3>
           </section>
+          <section><h2>Cloud9</h2><img src="lib/img/other-cloud9.jpg"></section>
+          <section><h2>Nitrous</h2><img src="lib/img/other-nitrousio.jpg"></section>
+          <section><h2>Codebox</h2><img src="lib/img/other-codebox.jpg"></section>
         </section>
 
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>
-            You can select from different transitions, like: <br>
-            <a href="?transition=none#/transitions">None</a> -
-            <a href="?transition=fade#/transitions">Fade</a> -
-            <a href="?transition=slide#/transitions">Slide</a> -
-            <a href="?transition=convex#/transitions">Convex</a> -
-            <a href="?transition=concave#/transitions">Concave</a> -
-            <a href="?transition=zoom#/transitions">Zoom</a>
-          </p>
-        </section>
-
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>
-            reveal.js comes with a few themes built in: <br>
-            <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-            <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-          </p>
-        </section>
-
-        <section>
-          <section data-background="#dddddd">
-            <h2>Slide Backgrounds</h2>
-            <p>
-              Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-            </p>
-            <a href="#" class="navigate-down">
-              <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-            </a>
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Hébergement de code</h3>
           </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-            <h2>Image Backgrounds</h2>
-            <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+          <section><h2>GitHub</h2><img src="lib/img/other-github.jpg"></section>
+          <section><h2>Bitbucket</h2><img src="lib/img/other-bitbucket.jpg"></section>
+          <section><h2>GitHub Pages</h2><img src="lib/img/other-githubpages.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Gestion de projet</h3>
           </section>
-          <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-            <h2>Tiled Backgrounds</h2>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+          <section><h2>Trello</h2><img src="lib/img/other-trello.jpg"></section>
+          <section><h2>Jira</h2><img src="lib/img/other-jira.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Gestion de logs</h3>
           </section>
-          <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-              <h2>Video Backgrounds</h2>
-              <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-            </div>
+          <section>papertrail<img src="lib/img/other-papertrail.jpg"></section>
+          <section>loggly<img src="lib/img/other-loggly.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Gestion d'erreurs</h3>
           </section>
+          <section><h2>Honeybadger</h2><img src="lib/img/other-honeybadger.jpg"></section>
+          <section><h2>Sentry</h2><img src="lib/img/other-sentry.jpg"></section>
+          <section><h2>bugsnag</h2><img src="lib/img/other-bugsnag.jpg"></section>
+          <section><h2>Raygun</h2><img src="lib/img/other-raygun.jpg"></section>
         </section>
 
-        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-          <h2>Background Transitions</h2>
-          <p>
-            Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-          </p>
-          <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Qualité</h3>
+          </section>
+          <section><h2>Travis CI</h2><img src="lib/img/other-travisci.jpg"></section>
+          <section><h2>Code Climate</h2><img src="lib/img/other-codeclimate.jpg"></section>
         </section>
 
-        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-          <h2>Background Transitions</h2>
-          <p>
-            You can override background transitions per-slide.
-          </p>
-          <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Relation client</h3>
+          </section>
+          <section><h2>Zopim</h2><img src="lib/img/other-zopim.jpg"></section>
+          <section><h2>Intercom</h2><img src="lib/img/other-intercom.jpg"></section>
         </section>
 
-        <section>
-          <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-          </code></pre>
-          <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        <section data-background="lib/img/top-of-city.jpg" class="shadow">
+          <p style="margin-bottom: 27%"></p>
+          <h2>Fin</h2>
+          <h5>Des questions ?</h5>
+          <p style="font-size: 0.3em; margin-top: 27%">Photo par mohammadali <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/mfakheri/8873167/</p>
         </section>
-
-        <section>
-          <h2>Marvelous List</h2>
-          <ul>
-            <li>No order here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-            <li>Or here</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Fantastic Ordered List</h2>
-          <ol>
-            <li>One is smaller than...</li>
-            <li>Two is smaller than...</li>
-            <li>Three!</li>
-          </ol>
-        </section>
-
-        <section>
-          <h2>Tabular Tables</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Value</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Apples</td>
-                <td>$1</td>
-                <td>7</td>
-              <tr>
-              <tr>
-                <td>Lemonade</td>
-                <td>$2</td>
-                <td>18</td>
-              <tr>
-              <tr>
-                <td>Bread</td>
-                <td>$3</td>
-                <td>2</td>
-              <tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section>
-          <h2>Clever Quotes</h2>
-          <p>
-            These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-          </p>
-          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-            &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-            reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-          </blockquote>
-        </section>
-
-        <section>
-          <h2>Intergalactic Interconnections</h2>
-          <p>
-            You can link between slides internally,
-            <a href="#/2/3">like this</a>.
-          </p>
-        </section>
-
-        <section>
-          <h2>Speaker View</h2>
-          <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-          <p>Press the <em>S</em> key to try it out.</p>
-
-          <aside class="notes">
-            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-          </aside>
-        </section>
-
-        <section>
-          <h2>Export to PDF</h2>
-          <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-        </section>
-
-        <section>
-          <h2>Global State</h2>
-          <p>
-            Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-            will be added as a class to the document element when the slide is open. This lets you
-            apply broader style changes, like switching the page background.
-          </p>
-        </section>
-
-        <section data-state="customevent">
-          <h2>State Events</h2>
-          <p>
-            Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-          </p>
-          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-  console.log( '"customevent" has fired' );
-} );
-          </code></pre>
-        </section>
-
-        <section>
-          <h2>Take a Moment</h2>
-          <p>
-            Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-          </p>
-        </section>
-
-        <section>
-          <h2>Much more</h2>
-          <ul>
-            <li>Right-to-left support</li>
-            <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-            <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-          </ul>
-        </section>
-
-        <section style="text-align: left;">
-          <h1>THE END</h1>
-          <p>
-            - <a href="http://slides.com">Try the online editor</a> <br>
-            - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-          </p>
-        </section>
-
       </div>
-
     </div>
 
     <script src="lib/js/head.min.js"></script>
@@ -1346,8 +1069,6 @@ Reveal.addEventListener( 'customevent', function() {
         // Optional reveal.js plugins
         dependencies: [
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
           { src: 'plugin/notes/notes.js', async: true }

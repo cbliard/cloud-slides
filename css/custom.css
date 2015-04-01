@@ -8,6 +8,11 @@
   text-transform: inherit;
 }
 
+.reveal .shadow * {
+  text-shadow: 0px 0px 5px #444, 0px 0px 2px #222;
+  color: #fff;
+}
+
 .reveal pre code.condensed {
   font-size: 0.75em;
   line-height: 1.1em;
@@ -29,15 +34,21 @@
   text-align: center;
   vertical-align: middle;
   width: 17%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.reveal table.stacked th.invisible {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .reveal table.stacked td {
   text-align: center;
   vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .reveal table.stacked td.us {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.8);
 }
 
 .reveal table.stacked td.us:before {
@@ -45,7 +56,7 @@
 }
 
 .reveal table.stacked td.vendor {
-  background-color: green;
+  background-color: rgba(0, 255, 0, 0.8);
 }
 
 .reveal table.stacked td.vendor:before {
