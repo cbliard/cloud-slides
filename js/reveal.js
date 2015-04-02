@@ -4200,6 +4200,11 @@
 			return currentSlide;
 		},
 
+		// Returns the previous slide background element, may be null
+		getPreviousSlideBackground: function() {
+			return previousBackground;
+		},
+
 		// Returns the current scale of the presentation content
 		getScale: function() {
 			return scale;
