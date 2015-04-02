@@ -1075,6 +1075,32 @@ test:
         ]
       });
 
+      /**
+       * Converts the target object to an array.
+       */
+      function toArray(o) {
+        return Array.prototype.slice.call(o);
+      }
+
+      Reveal.addEventListener('slidechanged', function(event) {
+        var backgrounds = document.querySelectorAll('.slide-background'),
+          presentBackgrounds = document.querySelectorAll('.slide-background.present'),
+          currentBackground = Reveal.getSlideBackground(event.indexh, event.indexv);
+
+        toArray(backgrounds).forEach(function(background) {
+          background.style.opacity = '';
+        });
+        if (event.currentSlide.hasAttribute('data-background')
+          && (currentBackground.classList.contains("future")
+              || currentBackground.classList.contains("present"))) {
+          toArray(presentBackgrounds).forEach(function(background) {
+            if (background.style.display == 'block') {
+              background.style.opacity = '1';
+            }
+          });
+        }
+      } );
+
     </script>
 
   </body>
