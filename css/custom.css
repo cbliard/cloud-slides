@@ -53,6 +53,11 @@
   background-color: rgba(0, 0, 255, 0.8);
 }
 
+.reveal table.stacked td.mixed {
+  background-color: rgba(0, 0, 255, 0.8);
+  background: -webkit-repeating-linear-gradient(45deg,rgba(0, 0, 255, 0.8) 0px, rgba(0, 0, 255, 0.8) 10px, rgba(0, 255, 0, 0.8) 10px, rgba(0, 255, 0, 0.8) 20px);
+}
+
 .reveal table.stacked td.us:before {
   content: "Vous";
 }
