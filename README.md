@@ -2,7 +2,7 @@
 
 Un retour d'expérience sur notre migration vers du Cloud à Hiptest et le gain en productivité obtenu.
 
-Présentation donnée à un Digital Apéro organisé par [Silicon Comté](http://www.siliconcomte.fr/) le 7 avril 2015.
+Présentation donnée à un [Digital Apéro](http://www.siliconcomte.fr/2015/03/digital-apero-07042015-developpeurs-gagnez-du-temps-avec-le-cloud/) organisé par [Silicon Comté](http://www.siliconcomte.fr/) le 7 avril 2015.
 
 ## Lancement de la présentation
 
