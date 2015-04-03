@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="51.625118"
+   height="51.5"
+   viewBox="0 0 51.625118 51.5"
+   version="1.1"
+   id="svg3136"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="shellycloud-logo.svg">
+  <metadata
+     id="metadata3157">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="974"
+     id="namedview3155"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="4.6793249"
+     inkscape:cx="68.383856"
+     inkscape:cy="25.75"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="logo" />
+  <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title3138">logo</title>
+  <desc
+     id="desc3140">Created with Sketch.</desc>
+  <defs
+     id="defs3142" />
+  <g
+     style="fill:none;stroke:none"
+     sketch:type="MSShapeGroup"
+     transform="translate(0.75001658,0.75)"
+     id="logo">
+    <g
+       style="stroke:#ffffff"
+       id="symbol">
+      <path
+         style="stroke-width:1.5"
+         inkscape:connector-curvature="0"
+         id="background"
+         d="m 25.067308,50 c 25.067307,-5e-6 25.067307,-11.192881 25.067307,-25 0,-13.807119 0,-24.9999962251051 -25.067307,-25 C 0,-3.774895e-6 0,11.192881 0,25 0,38.807119 0,50.000004 25.067308,50 z" />
+      <g
+         transform="translate(6.933511,14.56383)"
+         id="cloud">
+        <path
+           style="stroke-width:1.5"
+           inkscape:connector-curvature="0"
+           id="Oval-1"
+           d="M 6.4479261,20.212766 C 2.8868347,20.212766 0,17.355009 0,13.829787 0,10.304565 2.8868347,7.4468085 6.4479261,7.4468085 c 0.7832358,0 1.5338545,0.1382433 2.2283152,0.3914259 C 9.7161865,3.3487495 13.776714,0 18.627342,0 c 5.638395,0 10.209216,4.5247815 10.209216,10.106383 0,0.06894 -6.97e-4,0.137722 -0.0021,0.206333 0.608127,-0.24728 1.27412,-0.383638 1.972285,-0.383638 2.868657,0 5.194163,2.302082 5.194163,5.141844 0,2.839762 -2.325506,5.141844 -5.194163,5.141844 l -12.179416,0 -11.6420887,0 c -0.1771712,-0.0074 -0.3563788,0 -0.5373272,0 z" />
+        <path
+           style="fill:#4a4a4a;stroke-width:1.5"
+           inkscape:connector-curvature="0"
+           id="Path"
+           d="m 20,14.75 5.566489,0" />
+        <path
+           style="fill:#ffffff;stroke-width:0.30000001"
+           inkscape:connector-curvature="0"
+           id="&gt;"
+           d="m 17.986724,11.537347 -4.416016,2.650791 0,-0.867854 3.542259,-2.107644 -3.542259,-2.1607773 0,-0.8501421 4.416016,2.6271754 0,0.708451 z" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -74,9 +74,10 @@
           <h2>IaaS, PaaS, SaaS ?</h2>
           <h5>wtf ?...</h5>
           <aside class="notes">
-            Cloud computing is in a nutshell the delivery of compute / applications / storage as a service to consumers of the service.  The term cloud comes from the fact a cloud like symbol is often used to denote cloud services as per the diagram above.  The users / consumers of the service at a high level only need to know how to connect to the service, they do not need to have any knowledge of what underpins or provides the service in order to use it.
-
-            While the term ‘cloud computing’ may be relatively new, we have all been using cloud based services for many years, the most common example of this being online email services such as Hotmail and Gmail.  Hotmail has been operating as an online email cloud service since the mid 1990s.
+            Cloud : accès distant à des ressources informatiques à la demande.
+              Leur fonctionnement n'est pas connu des clients
+            ressource : capacité de calcul, de stockage, de traitement.
+            Le Cloud existe depuis longtemps : hotmail dans les années 90, c'était du cloud.
 
             En 2012, une étude de Citrix, 95% des américains déclaraient ne pas utiliser le cloud, alors que la plupart achetaient, stockaient des photos, écoutaient de la musique, géraient leur compte en banque en ligne. 29% pensent que c'est lié à la météo.
             http://www.citrix.com/news/announcements/aug-2012/most-americans-confused-by-cloud-computing-according-to-national.html
@@ -194,13 +195,21 @@
         <section data-background="lib/img/leaf.jpg" class="shadow">
           <h2>Autres aspects</h2>
           <ul>
-            <p class="fragment">Cloud public/privé/hybride</p>
+            <p class="fragment">Cloud public/privé</p>
             <p class="fragment">Paiement à l'usage</p>
-            <p class="fragment">Flexibilité</p>
             <p class="fragment">Mise à jour en continu</p>
+            <p class="fragment">Flexibilité</p>
             <p class="fragment">ATAWAD</p>
           </ul>
           <p style="font-size: 0.3em; margin-top: 15%">Photo par mightyboybrian <img src="lib/img/by-nc.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/mightyboybrian/5732782815/</p>
+          <aside class="notes">
+            Privé : infrastructure dédiée ;
+            Public : infrastructure mutualisée ;
+            Paiement à l'usage : nb machines, Go Traffic, nb requêtes, Go stockage ;
+            Mise à jour continue ;
+            Flexibilité : on verra après dans les slides, mais il est facile d'ajouter de nouvelles ressources ;
+            ATAWAD : AnyTime AnyWhere AnyDevice, de plus, pas d'installation => dispo tout de suite.
+          </aside>
         </section>
 
         <section data-transition="zoom" data-background="#4a4a4a">
@@ -221,7 +230,15 @@
 
           <!-- multiple virtual servers, one full stack -->
           <section data-background="lib/img/Infra05.svg" data-background-size="100%"></section>
-          <section data-background="lib/img/Infra06.svg" data-background-size="100%"></section>
+          <section data-background="lib/img/Infra06.svg" data-background-size="100%">
+            <aside class="notes">
+              Parler des snowflakes serveurs.
+              Serveur de gestion de configuration : centraliser la
+              configuration système des machines dans un référentiel unique.
+              Installation Denyhost.
+              Infrastructure as code.
+            </aside>
+          </section>
           <section data-background="lib/img/Infra07.svg" data-background-size="100%"></section>
           <section data-background="lib/img/Infra08.svg" data-background-size="100%"></section>
 
@@ -402,14 +419,15 @@ hiptest:
         <section>
           <section>
             <h2>shelly</h2>
-            <p>Pour commander son appli du bout des doigts</p>
+            <p>Commander son appli du bout des doigts</p>
             <pre><code data-trim class="no-highlight">
             $ gem install shelly
             </code></pre>
+            <img class="fragment" style="width: 20%" src="lib/img/shellycloud-logo-alone-white.svg">
           </section>
 
           <section>
-            <h2>Connecter son repo git</h2>
+            <h2>Connecter son dépôt git</h2>
             <pre><code data-trim class="no-highlight">
 $ shelly register christophebliard@hiptest.net
 Password: [enter your password]
@@ -431,7 +449,7 @@ Your application is set up.
           </section>
 
           <section>
-            <h2>Pousser son appli en prod</h2>
+            <h2>Pousser son application en production</h2>
             <pre><code data-trim class="no-highlight condensed">
 $ git push shelly master
 Counting objects: 17, done.
@@ -481,7 +499,7 @@ I, [2015-03-26T11:31:22.777596 #3547]  INFO -- : Appsignal has been notified of 
           <section>
             <h2>Informations</h2>
             <pre><code data-trim class="no-highlight condensed">
-$ shelly info -c hiptest
+$ shelly info
 Cloud hiptest:
   Region: EU
   State: running
@@ -580,7 +598,7 @@ Loading production environment (Rails 4.0.13)
             <div class="fragment">
               <h5 style="text-align: left; margin-left: 5%">PostgreSQL</h5>
               <pre><code data-trim class="no-highlight">
-$ shelly dbconsole -c hiptest
+$ shelly dbconsole
 psql (9.3.5)
 Type "help" for help.
 
@@ -622,12 +640,12 @@ Backup file saved to 2015.03.27.05.04.54.hiptest.postgresql.tar
           <section>
             <h5 style="text-align: left; margin-left: 5%">Lancer une sauvegarde</h5>
             <pre><code data-trim class="no-highlight condensed">
-$ shelly backup create postgresql -c hiptest
+$ shelly backup create postgresql
 Backup requested. It can take up to several minutes for the backup process to finish.
             </code></pre>
             <div class="fragment">
               <pre><code data-trim class="no-highlight condensed">
-$ shelly backup list -c hiptest
+$ shelly backup list
 Showing only last 10 backups.
 Use --all or -a option to list all backups.
 
@@ -646,7 +664,7 @@ Use --all or -a option to list all backups.
             <div class="fragment">
               <pre><code data-trim class="no-highlight condensed">
 # quelques minutes plus tard...
-$ shelly backup list -c hiptest
+$ shelly backup list
 Showing only last 10 backups.
 Use --all or -a option to list all backups.
 
@@ -665,17 +683,7 @@ Use --all or -a option to list all backups.
           </section>
 
           <section>
-            <h5 style="text-align: left; margin-left: 5%">Restaurer une sauvegarde</h5>
-            <pre><code data-trim class="no-highlight condensed">
-# file which you can find using command `shelly backup list`
-$ shelly backup restore 2015.03.26.10.15.33.hiptest.postgresql.tar -c hiptest
-You are about to restore postgresql database for cloud hiptest to state from
-2015.03.26.10.15.33.hiptest.postgresql.tar
-
-I want to restore the database (yes/no): no
-Canceled
-            </code></pre>
-            <div class="fragment">
+            <div>
               <h5 style="text-align: left; margin-left: 5%">Restaurer une sauvegarde (doc officielle)</h5>
               <pre><code data-trim class="no-highlight condensed">
 $ shelly backup restore 2011.11.26.04.00.10.foo.postgresql.tar.gz
@@ -767,7 +775,13 @@ Options:
           </section>
         </section>
 
-        <section data-background="lib/img/doge.jpg"></section>
+        <section data-background="lib/img/doge.jpg">
+          <aside class="notes">
+            Responsable produit a pu démarrer le service, l'arrêter
+            Paiement à la consommation
+            Support excellent
+          </aside>
+        </section>
 
         <!-- Use Shelly Cloud -->
         <section>
@@ -794,6 +808,11 @@ Options:
           </section>
 
           <section>
+            <h2>Page d'accueil</h2>
+            <img src="lib/img/shippable-homepage.jpg">
+          </section>
+          <section>
+            <h2>Tableau de bord</h2>
             <img src="lib/img/shippable-dashboard.jpg">
           </section>
 
@@ -864,6 +883,7 @@ after_failure:  # save some test logs
           </section>
 
           <section>
+            <h2>Résultats</h2>
             <img src="lib/img/shippable-hiptest-build.jpg">
           </section>
         </section>
@@ -875,11 +895,17 @@ after_failure:  # save some test logs
           </section>
 
           <section>
+            <h2>Page d'accueil</h2>
+            <img src="lib/img/circleci-homepage.jpg">
+          </section>
+
+          <section>
+            <h2>Tableau de bord</h2>
             <img src="lib/img/circleci-dashboard.jpg">
           </section>
 
           <section>
-            <h2>Configuration • shippable.yml</h2>
+            <h2>Configuration • circle.yml</h2>
             <pre><code data-trim class="ruby condensed">
 # Setup services
 dependencies:
@@ -899,6 +925,7 @@ test:
           </section>
 
           <section>
+            <h2>Résultats</h2>
             <img src="lib/img/circleci-hiptest-build.jpg">
           </section>
         </section>
@@ -959,6 +986,9 @@ test:
           <p style="margin-bottom: 27%"></p>
           <h2>Autres acteurs ?</h2>
           <p style="font-size: 0.3em; margin-top: 27%">Photo par cobalt <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/cobalt/3300229318/</p>
+          <aside class="notes">le fond d'écran : Petosky stone, fossile trouvable uniquement dans
+            le lac Michigan. Le fossile est appelé "Hexagonaria percarinata". 350 Millions d'années.
+          </aside>
         </section>
 
         <section data-background="lib/img/macro.jpg" class="shadow">
@@ -1005,11 +1035,18 @@ test:
         <section data-background="lib/img/macro.jpg" class="shadow">
           <section>
             <h2>Quelques SaaS</h2>
+            <h3>Hébergement</h3>
+          </section>
+          <section><h2>GitHub Pages</h2><img src="lib/img/other-githubpages.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
             <h3>Hébergement de code</h3>
           </section>
           <section><h2>GitHub</h2><img src="lib/img/other-github.jpg"></section>
           <section><h2>Bitbucket</h2><img src="lib/img/other-bitbucket.jpg"></section>
-          <section><h2>GitHub Pages</h2><img src="lib/img/other-githubpages.jpg"></section>
         </section>
 
         <section data-background="lib/img/macro.jpg" class="shadow">
@@ -1026,8 +1063,8 @@ test:
             <h2>Quelques SaaS</h2>
             <h3>Gestion de logs</h3>
           </section>
-          <section>papertrail<img src="lib/img/other-papertrail.jpg"></section>
           <section>loggly<img src="lib/img/other-loggly.jpg"></section>
+          <section>papertrail<img src="lib/img/other-papertrail.jpg"></section>
         </section>
 
         <section data-background="lib/img/macro.jpg" class="shadow">
@@ -1036,9 +1073,16 @@ test:
             <h3>Gestion d'erreurs</h3>
           </section>
           <section><h2>Honeybadger</h2><img src="lib/img/other-honeybadger.jpg"></section>
-          <section><h2>Sentry</h2><img src="lib/img/other-sentry.jpg"></section>
           <section><h2>bugsnag</h2><img src="lib/img/other-bugsnag.jpg"></section>
           <section><h2>Raygun</h2><img src="lib/img/other-raygun.jpg"></section>
+        </section>
+
+        <section data-background="lib/img/macro.jpg" class="shadow">
+          <section>
+            <h2>Quelques SaaS</h2>
+            <h3>Recherche temps réel</h3>
+          </section>
+          <section><h2>Algolia</h2><img src="lib/img/other-algolia.jpg"></section>
         </section>
 
         <section data-background="lib/img/macro.jpg" class="shadow">
