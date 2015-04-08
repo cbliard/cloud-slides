@@ -11,11 +11,11 @@ Cette présentation est réalisée avec [Reveal.js](https://github.com/hakimel/r
 1. Installer [Node.js](http://nodejs.org/)
 2. Installer [Grunt](http://gruntjs.com/getting-started#installing-the-cli)
 3. Installer les dépendances
-   ```sh
-   $ npm install
-   ```
+
+    $ npm install
+
 4. Servir la présentation et surveiller les changements de code source
-   ```sh
-   $ grunt serve
-   ```
+
+    $ grunt serve
+
 5. Ouvrir <http://localhost:8000> pour visionner la présentation
