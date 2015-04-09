@@ -58,6 +58,13 @@
         </section>
 
         <section data-background="lib/img/heart-cloud.jpg" class="shadow">
+          <p>Pour passer en plein écran<br>
+            <small>et cacher la barre d'adresse</small>
+          </p>
+          <h2 id="toggle-fullscreen">Cliquer ici</h2>
+        </section>
+
+        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
           <h2>Plan</h2>
           <p>Cloud ?</p>
           <p>Notre usage</p>
@@ -1178,6 +1185,7 @@ test:
     </div>
 
     <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/screenfull.min.js"></script>
     <script src="js/reveal.js"></script>
 
     <script>
@@ -1224,6 +1232,13 @@ test:
         }
       } );
 
+      Reveal.addEventListener('ready', function(event) {
+        document.getElementById('toggle-fullscreen').addEventListener('click', function () {
+          if (screenfull.enabled) {
+            screenfull.toggle();
+          }
+        });
+      });
     </script>
 
   </body>
