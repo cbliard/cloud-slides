@@ -42,38 +42,10 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section data-background="lib/img/heart-cloud.jpg" class="shadow">
-          <br>
-          <br>
-          <h1>Développeurs,</h1>
-          <h1>Gagnez du temps</h1>
-          <h1>avec le Cloud</h1>
-          <p>
-            <small>Christophe Bliard • <a href="http://twitter.com/cbliard">@cbliard</a></small><br>
-            <small>Développeur <a href="https://hiptest.net/">Hiptest</a></small>
-          </p>
-          <p style="font-size: 0.3em;">Photo par lennysan <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/lennysan/4403695597/</p>
-          <aside class="notes">
-            avant : Dév Python &amp; Java/JEE,
-            maintenant : Dév Ruby On Rails + emberjs + sysadmin</aside>
-        </section>
-
-        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
           <p>Pour passer en plein écran<br>
             <small>et cacher la barre d'adresse</small>
           </p>
           <h2 id="toggle-fullscreen">Cliquer ici</h2>
-        </section>
-
-        <section data-background="lib/img/heart-cloud.jpg" class="shadow">
-          <h2>Plan</h2>
-          <p>Cloud ?</p>
-          <p>Notre usage</p>
-          <p>Autres usages</p>
-          <aside class="notes">
-            C'est un retour d'expérience, donc non exhaustif
-            Il s'agit d'une discussion, d'un échange
-            Interventions bienvenues, on est tous là pour apprendre
-          </aside>
         </section>
 
         <section data-background="lib/img/heart-cloud.jpg" class="shadow">
@@ -686,55 +658,6 @@ Use --all or -a option to list all backups.
         </section>
 
         <section>
-          <div>
-            <h5 style="text-align: left; margin-left: 5%">Restaurer une sauvegarde (doc officielle)</h5>
-            <pre><code data-trim class="no-highlight condensed">
-$ shelly backup restore 2011.11.26.04.00.10.foo.postgresql.tar.gz
-You are about restore database postgres for cloud todo-list-test to state from
-2011.11.26.04.00.10.foo.postgresql.tar.gz
-
-I want to restore the database (yes/no): yes
-Restore has been scheduled. Wait few minutes till database is restored.
-            </code></pre>
-          </div>
-
-          <aside class="notes">
-            Restauration sur poste de dév avec pg_restore
-          </aside>
-        </section>
-
-        <section>
-          <h2>Configuration SSL</h2>
-          <h5 style="text-align: left; margin-left: 5%">Création d'un point d'entrée</h5>
-          <pre><code data-trim class="no-highlight condensed">
-$ shelly endpoint create
-Endpoint was created for your cloud
-Point your domain to private IP address: 10.0.0.1
-          </code></pre>
-
-          <div class="fragment">
-            <h5 style="text-align: left; margin-left: 5%">Voir le point d'entrée créé</h5>
-            <pre><code data-trim class="no-highlight condensed">
-$ shelly endpoint list
-Available HTTP endpoints
-
-  UUID                                  |  IP address  |  Certificate  |  SNI
-  afef1570-9e99-4836-8c87-c997d736506f  |  10.0.0.1    |  ✗            |  ✗
-            </code></pre>
-          </div>
-
-          <div class="fragment">
-            <h5 style="text-align: left; margin-left: 5%">Ajout du certificat SSL</h5>
-            <pre><code data-trim class="no-highlight condensed">
-$ shelly endpoint update afef1570-9e99-4836-8c87-c997d736506f server.crt server.key
-Endpoint was updated
-Deployed certificate on front end servers.
-Point your domain to private IP address: 10.0.0.1
-            </code></pre>
-          </div>
-        </section>
-
-        <section>
           <h2>Et d'autres...</h2>
           <pre><code data-trim class="no-highlight condensed">
 $ shelly help
@@ -797,23 +720,6 @@ Options:
         <section data-background="#4a4a4a">
           <a href="https://www.shippable.com/"><img style="width: 80%;" src="lib/img/shippable-logo-white.png"></a>
           <p><q>Ship fast, evolve faster</q></p>
-          <hr>
-          <a href="https://circleci.com/"><img style="width: 80%;" src="lib/img/circleci-horizontal-dark.svg"></a>
-          <p><q>Ship better code, faster.</q></p>
-        </section>
-
-        <section data-background="#4a4a4a">
-          <a href="https://www.shippable.com/"><img style="width: 80%;" src="lib/img/shippable-logo-white.png"></a>
-          <p><q>Ship fast, evolve faster</q></p>
-        </section>
-
-        <section>
-          <h2>Page d'accueil</h2>
-          <img src="lib/img/shippable-homepage.jpg">
-        </section>
-        <section>
-          <h2>Tableau de bord</h2>
-          <img src="lib/img/shippable-dashboard.jpg">
         </section>
 
         <section>
@@ -887,46 +793,6 @@ after_failure:  # save some test logs
           <img src="lib/img/shippable-hiptest-build.jpg">
         </section>
 
-        <section data-background="#4a4a4a">
-          <a href="https://circleci.com/"><img style="width: 80%;" src="lib/img/circleci-horizontal-dark.svg"></a>
-          <p><q>Ship better code, faster.</q></p>
-        </section>
-
-        <section>
-          <h2>Page d'accueil</h2>
-          <img src="lib/img/circleci-homepage.jpg">
-        </section>
-
-        <section>
-          <h2>Tableau de bord</h2>
-          <img src="lib/img/circleci-dashboard.jpg">
-        </section>
-
-        <section>
-          <h2>Configuration • circle.yml</h2>
-          <pre><code data-trim class="ruby condensed">
-# Setup services
-dependencies:
-  post:
-    # install custom version of elasticsearch
-    # See https://circleci.com/docs/installing-elasticsearch
-    - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.0.3.tar.gz
-    - tar -xvf elasticsearch-1.0.3.tar.gz
-    - elasticsearch-1.0.3/bin/elasticsearch: {background: true}
-    - sleep 10 # wait elasticsearch start
-
-test:
-  override:
-    - "bundle exec rspec":
-        timeout: 3600
-          </code></pre>
-        </section>
-
-        <section>
-          <h2>Résultats</h2>
-          <img src="lib/img/circleci-hiptest-build.jpg">
-        </section>
-
         <section data-background="lib/img/Infra24.svg" data-background-size="100%"><p>&nbsp;</p></section>
         <section data-background="lib/img/Infra25.svg" data-background-size="100%"><p>&nbsp;</p></section>
         <section data-background="lib/img/Infra27.svg" data-background-size="100%"><p>&nbsp;</p></section>
@@ -982,204 +848,6 @@ test:
             Performances
             Mobilité des données
           </aside>
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <p style="padding: 13%"></p>
-          <h2>Autres acteurs ?</h2>
-          <p style="font-size: 0.3em; margin-top: 27%">Photo par cobalt <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/cobalt/3300229318/</p>
-          <aside class="notes">le fond d'écran : Petosky stone, fossile trouvable uniquement dans
-            le lac Michigan. Le fossile est appelé "Hexagonaria percarinata". 350 Millions d'années.
-          </aside>
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="http://www.paasify.it/">paasify.it</a></h2>
-          <img src="lib/img/other-paasifyit.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <img src="lib/img/other-paasifyit-search.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <img src="lib/img/other-paasifyit-results.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques PaaS</h2>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.heroku.com/">Heroku</a></h2>
-          <img src="lib/img/other-heroku.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://scalingo.com/">Scalingo</a></h2>
-          <img src="lib/img/other-scalingo.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="http://deliverous.com/">Deliverous</a></h2>
-          <img src="lib/img/other-deliverous.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.clever-cloud.com/">Clever Cloud</a></h2>
-          <img src="lib/img/other-clevercloud.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.firebase.com/">Firebase</a></h2>
-          <img src="lib/img/other-firebase.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h5>Monitoring</h5>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.skylight.io/">Skylight</a></h2>
-          <img src="lib/img/other-skylight.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.datadoghq.com/">Datadog</a></h2>
-          <img src="lib/img/other-datadog.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Développement</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://c9.io/">Cloud9</a></h2>
-          <img src="lib/img/other-cloud9.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.nitrous.io/">Nitrous</a></h2>
-          <img src="lib/img/other-nitrousio.jpg"></section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.codebox.io/">Codebox</a></h2>
-          <img src="lib/img/other-codebox.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Hébergement</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://pages.github.com/">GitHub Pages</a></h2>
-          <img src="lib/img/other-githubpages.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="http://slidedeck.io/">Slidedeck.io</a></h2>
-          <img src="lib/img/other-slidedeck.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Hébergement de code</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://github.com/">GitHub</a></h2>
-          <img src="lib/img/other-github.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://bitbucket.org/">Bitbucket</a></h2>
-          <img src="lib/img/other-bitbucket.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Gestion de projet</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://trello.com/">Trello</a></h2>
-          <img src="lib/img/other-trello.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://fr.atlassian.com/software/jira/">Jira</a></h2>
-          <img src="lib/img/other-jira.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Envoi d'emails</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://fr.mailjet.com/">Mailjet</a></h2>
-          <img src="lib/img/other-mailjet.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Gestion de logs</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.loggly.com/">loggly</a></h2>
-          <img src="lib/img/other-loggly.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://papertrailapp.com/">papertrail</a></h2>
-          <img src="lib/img/other-papertrail.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Gestion d'erreurs</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.honeybadger.io/">Honeybadger</a></h2>
-          <img src="lib/img/other-honeybadger.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://bugsnag.com/">bugsnag</a></h2>
-          <img src="lib/img/other-bugsnag.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://raygun.io/">Raygun</a></h2>
-          <img src="lib/img/other-raygun.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Recherche temps réel</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.algolia.com/">Algolia</a></h2>
-          <img src="lib/img/other-algolia.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Qualité</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://travis-ci.com/">Travis CI</a></h2>
-          <img src="lib/img/other-travisci.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://codeclimate.com/">Code Climate</a></h2>
-          <img src="lib/img/other-codeclimate.jpg">
-        </section>
-
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2>Quelques SaaS</h2>
-          <h3>Relation client</h3>
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://fr.zopim.com/">Zopim</a></h2>
-          <img src="lib/img/other-zopim.jpg">
-        </section>
-        <section data-background="lib/img/macro.jpg" class="shadow">
-          <h2><a href="https://www.intercom.io/">Intercom</a></h2>
-          <img src="lib/img/other-intercom.jpg">
-        </section>
-
-        <section data-background="lib/img/top-of-city.jpg" class="shadow">
-          <p style="padding: 10%"></p>
-          <h2>Fin</h2>
-          <h5>Des questions ?<br></h5>
-          <p><small>
-            Christophe Bliard • <a href="http://twitter.com/cbliard">@cbliard</a><br>
-            <a href="http://cbliard.github.io/cloud-slides/">cbliard.github.io/cloud-slides</a>
-          </small></p>
-          <p style="font-size: 0.3em; margin-top: 25%">Photo par mohammadali <img src="lib/img/by-nc-sa.svg" style="vertical-align: middle;"> https://www.flickr.com/photos/mfakheri/8873167/</p>
         </section>
       </div>
     </div>
